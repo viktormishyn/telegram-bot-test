@@ -41,7 +41,7 @@ def main():
     dp.add_handler(MessageHandler(Filters.text, handle_message))
     dp.add_error_handler(error)
 
-    updater.start_polling(poll_interval=random.uniform(2.9, 4.9))
+    updater.start_polling(timeout=random.uniform(2, 4))
     updater.idle()
 
 
