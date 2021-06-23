@@ -1,4 +1,5 @@
 from datetime import datetime
+from random_image import cat
 
 
 def sample_responses(input_text):
@@ -15,4 +16,4 @@ def sample_responses(input_text):
         date_time = now.strftime('%d/%m/%y, %H:%M:%S')
         return date_time
 
-    return "Ниче не понял :=("
+    return f"Ниче не понял :=(. Лови котятку \n {cat()}"
