@@ -1,5 +1,6 @@
 import os
 import random
+import datetime
 from dotenv import load_dotenv
 from telegram.ext import *  # TODO define which dependencies really needed
 import Responses as R
@@ -21,6 +22,10 @@ def help_command(update, context):
 
 
 def handle_message(update, context):
+    print(datetime.datetime.now())
+    print(update['message']['chat']['username'])
+    print(update['message']['text'])
+    print()
     text = str(update.message.text).lower()
     response = R.sample_responses(text)
 
