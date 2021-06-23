@@ -1,4 +1,5 @@
 import os
+import random
 from dotenv import load_dotenv
 from telegram.ext import *  # TODO define which dependencies really needed
 import Responses as R
@@ -40,7 +41,7 @@ def main():
     dp.add_handler(MessageHandler(Filters.text, handle_message))
     dp.add_error_handler(error)
 
-    updater.start_polling()
+    updater.start_polling(poll_interval=random.uniform(1.9, 3.9))
     updater.idle()
 
 
