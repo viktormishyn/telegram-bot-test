@@ -12,12 +12,12 @@ print("Bot started...")
 
 
 def start_command(update, context):
-    update.message.reply_text('Say something!)')
+    update.message.reply_text('Скажи что-нибудь=)')
 
 
 def help_command(update, context):
     update.message.reply_text(
-        'If you need help, you should ask for it on Google=))')
+        'Гугл в помощь=))')
 
 
 def handle_message(update, context):
@@ -41,7 +41,7 @@ def main():
     dp.add_handler(MessageHandler(Filters.text, handle_message))
     dp.add_error_handler(error)
 
-    updater.start_polling(poll_interval=random.uniform(1.9, 3.9))
+    updater.start_polling(poll_interval=random.uniform(2.9, 4.9))
     updater.idle()
 
 
